@@ -5,9 +5,11 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('home');
-})->name('home');
+})->name('admin');
+
+Route::get('/', App\Livewire\Quiz\Quizzes::class)->name('quiz.quizzes');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::view('dashboard', 'dashboard')
