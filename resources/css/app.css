@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
+@import '../../vendor/tallstackui/tallstackui/src/resources/css/tallstackui.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@plugin '@tailwindcss/forms';
 
+@source '../../vendor/tallstackui/tallstackui/**/*.php';
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
@@ -62,6 +66,11 @@ select:focus[data-flux-control] {
 }
 
 
+.dm-sans-font {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
